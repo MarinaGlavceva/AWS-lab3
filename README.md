@@ -184,7 +184,8 @@
 * Получил публичный IP
 * Применена группа безопасности web-sg
 * В User Data установился Apache и PHP-файл `phpinfo()`
-
+<img width="881" height="763" alt="Image" src="https://github.com/user-attachments/assets/99b575f8-1cf0-442d-801a-df0143bd4964" />
+<img width="860" height="541" alt="Image" src="https://github.com/user-attachments/assets/da231739-a0a4-4b77-b821-a26f10f2bb63" />
 ## DB-server
 
 * Размещён в приватной подсети
@@ -192,12 +193,18 @@
 * Установлена MariaDB
 * root-пароль был изменён
 
+<img width="861" height="789" alt="Image" src="https://github.com/user-attachments/assets/47b50eae-ee8b-4c83-86cf-29ee7dc46ca8" />
+
+<img width="854" height="308" alt="Image" src="https://github.com/user-attachments/assets/a42d7abd-d312-49f2-8369-6f1e59850cc0" />
+
 ## Bastion-host
 
 * Размещён в публичной подсети
 * Использует группу безопасности с SSH-доступом
 * Через него я подключалась в приватную подсеть
+<img width="867" height="782" alt="Image" src="https://github.com/user-attachments/assets/70666771-a054-47d2-96d4-185f029f5a04" />
 
+<img width="867" height="258" alt="Image" src="https://github.com/user-attachments/assets/ed32b19f-e753-4d92-9ee5-e2e6bbe44b0a" />
 # 9. Проверка работы
 
 Я выполнила:
