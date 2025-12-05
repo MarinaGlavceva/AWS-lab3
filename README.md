@@ -97,9 +97,11 @@
 
 * **Name:** `public-rt-kXX`
 * Я добавила маршрут:
-
+<img width="955" height="737" alt="Image" src="https://github.com/user-attachments/assets/c22a4825-cea0-404a-a9e8-558b2dbbc953" />
   * `0.0.0.0/0` → **Internet Gateway**
 * Ассоциировала таблицу с `public-subnet-kXX`
+
+<img width="935" height="558" alt="Image" src="https://github.com/user-attachments/assets/7d009b7f-fe37-4a60-941d-1179966f0806" />
 
 Теперь публичная подсеть получила выход в интернет.
 
@@ -108,10 +110,10 @@
 Я привязываю таблицу маршрутов к подсети, чтобы подсеть использовала заданные маршруты, а не маршруты по умолчанию.
 
 ## Приватная таблица маршрутов
-
+<img width="955" height="737" alt="Image" src="https://github.com/user-attachments/assets/7e99ec31-7b9b-457c-b1ae-26d7b311df79" />
 * **Name:** `private-rt-kXX`
 * Ассоциирована с `private-subnet-kXX`
-
+<img width="951" height="599" alt="Image" src="https://github.com/user-attachments/assets/96ef880b-f577-46a4-8cfe-4a41c1bfb545" />
 Пока что приватная подсеть не имеет доступа в интернет — NAT Gateway ещё не создан.
 
 # 6. Создание NAT Gateway
