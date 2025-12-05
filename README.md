@@ -157,7 +157,7 @@
 
 * HTTP (80) — всему миру
 * HTTPS (443) — всему миру
-
+<img width="894" height="754" alt="Image" src="https://github.com/user-attachments/assets/05abba98-96fc-4319-ac3e-5f77287b13d8" />
 ### **bastion-sg-kXX:**
 
 Разрешила вход:
