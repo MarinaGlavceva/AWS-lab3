@@ -53,6 +53,7 @@
 * **Name:** `student-vpc-kXX`
 * **CIDR блок:** `10.(k%30).0.0/16`
 * **Tenancy:** Default
+<img width="1280" height="388" alt="Image" src="https://github.com/user-attachments/assets/a7f4b3f2-b904-4ca5-a4c7-81f113d13b18" />
 
 ### Ответ на контрольный вопрос
 
@@ -64,6 +65,8 @@
 
 Я создала IGW `student-igw-kXX` и прикрепила его к моей VPC.
 С этого момента подсети внутри VPC могут получать доступ в интернет (если маршрутизация настроена правильно).
+
+<img width="953" height="664" alt="Image" src="https://github.com/user-attachments/assets/15a3e640-c17b-4d3c-aef4-37115e23a761" />
 
 # 4. Создание подсетей
 
