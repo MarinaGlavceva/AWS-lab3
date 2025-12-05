@@ -1,4 +1,4 @@
-# Лабораторная работа: Создание виртуальной сети (VPC) в AWS**
+# Лабораторная работа: Создание виртуальной сети (VPC) в AWS
 
 ## **Цель моей работы**
 
@@ -75,7 +75,7 @@
 * **Name:** `public-subnet-kXX`
 * **CIDR:** `10.(k%30).1.0/24`
 * **AZ:** eu-central-1a
-
+<img width="1280" height="245" alt="Image" src="https://github.com/user-attachments/assets/29ee0d99-88f9-4ae6-b839-3d66a743bd58" />
 ###  Ответ на контрольный вопрос
 
 На данном этапе подсеть НЕ является публичной, потому что маршруты ещё не направлены в Internet Gateway.
@@ -85,6 +85,7 @@
 * **Name:** `private-subnet-kXX`
 * **CIDR:** `10.(k%30).2.0/24`
 * **AZ:** eu-central-1b
+<img width="891" height="783" alt="Image" src="https://github.com/user-attachments/assets/f49b7125-b123-47cf-9bda-94843436178a" />
 
 ### Ответ на контрольный вопрос
 
