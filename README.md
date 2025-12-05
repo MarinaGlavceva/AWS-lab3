@@ -122,6 +122,8 @@
 
 Я создала новый статический публичный IP (Elastic IP).
 
+<img width="926" height="780" alt="Image" src="https://github.com/user-attachments/assets/4978ea54-09b4-4d7b-a599-6121d26b629c" />
+
 ## 6.2 Создание NAT Gateway
 
 * **Name:** `nat-gateway-kXX`
@@ -129,6 +131,7 @@
 * Выбрана режим "Zonal"
 * К NAT привязан Elastic IP
 
+<img width="913" height="785" alt="Image" src="https://github.com/user-attachments/assets/bb3b5738-6b48-4226-a430-d4bed2d0a946" />
 После нескольких минут NAT стал доступным.
 
 ## 6.3 Настройка маршрутов приватной таблицы
@@ -137,6 +140,7 @@
 
 * `0.0.0.0/0` → **NAT Gateway**
 
+<img width="923" height="752" alt="Image" src="https://github.com/user-attachments/assets/4b07adee-024f-49c8-bd60-9335958be428" />
 Теперь приватная подсеть имеет доступ в интернет, но остаётся недоступной извне.
 
 ### Контрольный вопрос: как работает NAT Gateway?
