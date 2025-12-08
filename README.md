@@ -50,8 +50,8 @@
 
 Я создала VPC со следующими параметрами:
 
-* **Name:** `student-vpc-kXX`
-* **CIDR блок:** `10.(k%30).0.0/16`
+* **Name:** `student-vpc-k13`
+* **CIDR блок:** `10.13.0.0/16`
 * **Tenancy:** Default
 <img width="1280" height="388" alt="Image" src="https://github.com/user-attachments/assets/a7f4b3f2-b904-4ca5-a4c7-81f113d13b18" />
 
@@ -63,7 +63,7 @@
 
 # 3. Создание Internet Gateway (IGW)
 
-Я создала IGW `student-igw-kXX` и прикрепила его к моей VPC.
+Я создала IGW `student-igw-k13` и прикрепила его к моей VPC.
 С этого момента подсети внутри VPC могут получать доступ в интернет (если маршрутизация настроена правильно).
 
 <img width="953" height="664" alt="Image" src="https://github.com/user-attachments/assets/15a3e640-c17b-4d3c-aef4-37115e23a761" />
@@ -72,8 +72,8 @@
 
 ## 4.1 Публичная подсеть
 
-* **Name:** `public-subnet-kXX`
-* **CIDR:** `10.(k%30).1.0/24`
+* **Name:** `public-subnet-k13`
+* **CIDR:** `10.13.1.0/24`
 * **AZ:** eu-central-1a
 <img width="1280" height="245" alt="Image" src="https://github.com/user-attachments/assets/29ee0d99-88f9-4ae6-b839-3d66a743bd58" />
 ###  Ответ на контрольный вопрос
@@ -82,8 +82,8 @@
 
 ## 4.2 Приватная подсеть
 
-* **Name:** `private-subnet-kXX`
-* **CIDR:** `10.(k%30).2.0/24`
+* **Name:** `private-subnet-k13`
+* **CIDR:** `10.13.2.0/24`
 * **AZ:** eu-central-1b
 <img width="891" height="783" alt="Image" src="https://github.com/user-attachments/assets/f49b7125-b123-47cf-9bda-94843436178a" />
 
@@ -95,7 +95,7 @@
 
 ## Публичная таблица маршрутов
 
-* **Name:** `public-rt-kXX`
+* **Name:** `public-rt-k13`
 * Я добавила маршрут:
 <img width="955" height="737" alt="Image" src="https://github.com/user-attachments/assets/c22a4825-cea0-404a-a9e8-558b2dbbc953" />
   * `0.0.0.0/0` → **Internet Gateway**
@@ -111,8 +111,8 @@
 
 ## Приватная таблица маршрутов
 <img width="955" height="737" alt="Image" src="https://github.com/user-attachments/assets/7e99ec31-7b9b-457c-b1ae-26d7b311df79" />
-* **Name:** `private-rt-kXX`
-* Ассоциирована с `private-subnet-kXX`
+* **Name:** `private-rt-k13`
+* Ассоциирована с `private-subnet-k13`
 <img width="951" height="599" alt="Image" src="https://github.com/user-attachments/assets/96ef880b-f577-46a4-8cfe-4a41c1bfb545" />
 Пока что приватная подсеть не имеет доступа в интернет — NAT Gateway ещё не создан.
 
@@ -126,7 +126,7 @@
 
 ## 6.2 Создание NAT Gateway
 
-* **Name:** `nat-gateway-kXX`
+* **Name:** `nat-gateway-k13`
 * Размещён в публичной подсети
 * Выбрана режим "Zonal"
 * К NAT привязан Elastic IP
@@ -136,7 +136,7 @@
 
 ## 6.3 Настройка маршрутов приватной таблицы
 
-В `private-rt-kXX` я добавила:
+В `private-rt-k13` я добавила:
 
 * `0.0.0.0/0` → **NAT Gateway**
 
@@ -151,26 +151,26 @@
 
 Я создала три группы безопасности:
 
-### **web-sg-kXX:**
+### **web-sg-k13:**
 
 Разрешила вход:
 
 * HTTP (80) — всему миру
 * HTTPS (443) — всему миру
 <img width="894" height="754" alt="Image" src="https://github.com/user-attachments/assets/05abba98-96fc-4319-ac3e-5f77287b13d8" />
-### **bastion-sg-kXX:**
+### **bastion-sg-k13:**
 
 Разрешила вход:
 
 * SSH (22) — **только с моего IP**
 
-### **db-sg-kXX:**
+### **db-sg-k13:**
 
 Разрешила:
 
-* MySQL (3306) — от web-sg-kXX
-* MySQL (3306) — от bastion-sg-kXX
-* SSH — только от bastion-host
+* MySQL (3306) — от web-sg-k13
+* MySQL (3306) — от bastion-sg-k13
+* SSH — только от bastion-host-к13
 
 ###  Контрольный вопрос: кто такой Bastion Host?
 
