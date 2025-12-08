@@ -247,11 +247,16 @@ mysql -h <private-ip-db> -u root -p
 После этого я вручную удалила:
 
 * ассоциации таблиц маршрутов,
+   <img width="660" height="472" alt="Image" src="https://github.com/user-attachments/assets/b5844e45-5dba-4706-9752-611741ecf52e" />
 * сами таблицы маршрутов,
+  <img width="620" height="489" alt="Image" src="https://github.com/user-attachments/assets/eaaf4027-d0e1-4b54-8ada-e9a782c4d06d" />
 * подсети,
 * Security Groups,
+  <img width="632" height="654" alt="Image" src="https://github.com/user-attachments/assets/66e982c7-070d-4fb1-ad20-d4c463f1dd01" />
 * Internet Gateway,
+  <img width="581" height="340" alt="Image" src="https://github.com/user-attachments/assets/348fd5c8-a9f8-4eac-9800-fd8b0539a1eb" />
 * VPC.
+  <img width="604" height="387" alt="Image" src="https://github.com/user-attachments/assets/086a8b12-b003-4681-88b3-986eb11b1d89" />
 
 Все ресурсы были успешно удалены в корректном порядке.
 
